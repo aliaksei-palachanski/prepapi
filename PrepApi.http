@@ -1,6 +1,21 @@
-@PrepApi_HostAddress = http://localhost:5130
+@host = http://localhost:5000
 
-GET {{PrepApi_HostAddress}}/weatherforecast/
-Accept: application/json
+GET {{host}}/todos
 
 ###
+POST {{host}}/todos
+Content-Type: application/json
+
+{ "title": "Docker день 2", "isDone": false }
+
+###
+PUT {{host}}/todos/2
+Content-Type: application/json
+
+{ "title": "Docker день 2", "isDone": true }
+
+###
+GET {{host}}/todos/2
+
+###
+DELETE {{host}}/todos/2
