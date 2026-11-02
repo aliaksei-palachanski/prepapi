@@ -22,7 +22,7 @@ describe('TodoList', () => {
 
     render(<TodoList />);
 
-    expect(screen.getByText('Loading...')).toBeInTheDocument();
+    expect(screen.getByText('L1oading...')).toBeInTheDocument();
     expect(await screen.findByText('Buy milk')).toBeInTheDocument();
   });
 
