@@ -9,9 +9,9 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/bin/Debug/net10.0/PrepApi.dll",
             "args": [],
-            "cwd": "${workspaceFolder}",
+            "program": "${workspaceFolder}/src/PrepApi/bin/Debug/net10.0/PrepApi.dll",
+            "cwd": "${workspaceFolder}/src/PrepApi",
             "stopAtEntry": false,
             "serverReadyAction": {
                 "action": "openExternally",
