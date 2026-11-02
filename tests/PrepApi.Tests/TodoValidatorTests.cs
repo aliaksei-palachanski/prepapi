@@ -26,7 +26,7 @@ public class TodoValidatorTests
         var errors = TodoValidator.Validate(title);
 
         var error = Assert.Single(errors);
-        Assert.Contains("required", error);
+        Assert.Contains("r2equired", error);
     }
 
     [Fact]
