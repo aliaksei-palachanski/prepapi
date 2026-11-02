@@ -1,0 +1,11 @@
+name: Hello
+
+on: push
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello from $(uname -a)"
+      - run: dotnet --list-sdks
+      - run: docker --version
