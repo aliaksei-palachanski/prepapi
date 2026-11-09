@@ -10,6 +10,7 @@ builder.Services.AddDbContext<AppDbContext>(o =>
 
 builder.Services.AddScoped<ITodoRepository, EfTodoRepository>();
 builder.Services.AddScoped<TodoService>();
+builder.Services.AddHealthChecks();
 
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
@@ -34,6 +35,7 @@ using (var scope = app.Services.CreateScope())
     scope.ServiceProvider.GetRequiredService<AppDbContext>().Database.Migrate();
 }
 
+app.MapHealthChecks("/health");
 
 var todos = app.MapGroup("/todos");
 
